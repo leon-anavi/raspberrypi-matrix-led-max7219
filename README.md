@@ -23,8 +23,25 @@ $ ls -l /dev/spi*
 crw------- 1 root root 153, 0 Jan  1  1970 /dev/spidev0.0
 crw------- 1 root root 153, 1 Jan  1  1970 /dev/spidev0.1
 ```
+
+#### Python
+
+Follow the steps below to run the Python example:
+
 * Install https://github.com/rm-hull/max7219
 * Run Python script as root:
 ```
 sudo python python/matrix-cpu.py
+```
+
+#### C
+
+Follow the steps below to build and run the C example:
+
+* Install C library for Broadcom BCM 2835 as used in Raspberry Pi: http://www.airspayce.com/mikem/bcm2835/
+* Build and run the example:
+```
+cd c
+make 
+sudo ./led-max7219-text hello
 ```
